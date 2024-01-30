@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy:{
-      '/api': "https://mern-stack-blog-app-beta.vercel.app/"
+      '/api': "http://localhost:8000/"
     }
   },
   resolve: {
