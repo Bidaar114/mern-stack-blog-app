@@ -21,3 +21,6 @@ connectDb();
 app.listen(PORT, () => {
     console.log(`${chalk.yellow.bold('server')} litening on ${PORT}`);
 })
+
+
+module.exports = app;
