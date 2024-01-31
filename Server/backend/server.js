@@ -4,10 +4,22 @@ import chalk from 'chalk';
 import userRouter from './routes/userRouter.js';
 import cookieParser from 'cookie-parser';
 import postRouter from './routes/postRouter.js';
+//const cors = require('cors');
+  import cors from 'cors';
 
 
 const app = express();
 const PORT = 8000
+
+
+
+app.use(cors());
+
+app.use(cors({
+  origin: ['https://mern-stack-blog-app-api.vercel.app'],
+  methods: ["POST", "GET", "DELETE"],
+  credentials: true
+}));
 
 app.use(express.json());
 app.use(cookieParser());
@@ -23,4 +35,4 @@ app.listen(PORT, () => {
 })
 
 
-module.exports = app;
+//module.exports = app;
